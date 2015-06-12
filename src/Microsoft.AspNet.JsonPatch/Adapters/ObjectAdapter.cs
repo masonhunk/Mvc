@@ -250,7 +250,7 @@ namespace Microsoft.AspNet.JsonPatch.Adapters
             if (positionAsInteger > -1)
             {
                 actualFromProperty = operation.from.Substring(0,
-                    operation.from.IndexOf('/' + positionAsInteger.ToString()));
+                    operation.from.LastIndexOf('/' + positionAsInteger.ToString()));
             }
 
             var patchProperty = FindPropertyAndParent(objectToApplyTo, actualFromProperty);
@@ -350,7 +350,7 @@ namespace Microsoft.AspNet.JsonPatch.Adapters
                 if (positionAsInteger > -1)
                 {
                     actualPathToProperty = path.Substring(0,
-                        path.IndexOf('/' + positionAsInteger.ToString()));
+                        path.LastIndexOf('/' + positionAsInteger.ToString()));
                 }
             }
 
@@ -483,7 +483,7 @@ namespace Microsoft.AspNet.JsonPatch.Adapters
             if (positionAsInteger > -1)
             {
                 actualFromProperty = operation.from.Substring(0,
-                    operation.from.IndexOf('/' + positionAsInteger.ToString()));
+                    operation.from.LastIndexOf('/' + positionAsInteger.ToString()));
             }
 
             var patchProperty = FindPropertyAndParent(objectToApplyTo, actualFromProperty);
